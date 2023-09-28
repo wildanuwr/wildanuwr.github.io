@@ -1,14 +1,11 @@
-# Portfolio Responsive Complete
-## [Watch it on youtube](https://youtu.be/AKNvTxWOdKw)
+# This Is My Portofolio
 ### Portfolio Responsive Complete
 
-- Responsive Personal Portfolio Website HTML CSS & JavaScript.
-- Contains animations when scrolling.
-- Smooth scrolling in each section.
-- Developed first with the Mobile First methodology, then for desktop.
-- Compatible with all mobile devices and with a beautiful and pleasant user interface.
+- Network Engenering , Administrator System And IT Support
+- 10 Years Working On IT Support In SMK PGRI 5 JEMBER
+- soft skill In HTML , PHP , JS and Python
+- If You Need My skills You can Contact Me @ may Website
 
-💙 Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/@Bedimcode)
+  Thanks You
 
-![preview img](/preview.png)
 
