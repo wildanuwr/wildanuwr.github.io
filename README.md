@@ -6,6 +6,6 @@
 - soft skill In HTML , PHP , JS and Python
 - If You Need My skills You can Contact Me @ may Website
 
-  Thanks You
+  Thank You
 
 
