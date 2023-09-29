@@ -1,0 +1,101 @@
+/* CSS Reset */
+html, body, h1, h2, p, ul, ol, li, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    align-items: center;
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p {
+    text-align: justify;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 70px;
+    margin-right: 70px;
+    color: #555;
+    line-height: 1.5; /* Menambahkan jarak antara baris */
+}
+
+ul, ol {
+    margin-left: 100px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.left-image {
+    width: 150px;
+    float: left; /* Mengatur posisi gambar ke kiri */
+    margin-left: 20px; /* Jarak antara gambar dengan teks */
+}
+
+.centered-container {
+    margin-bottom: 50px;
+    text-align: center; /* Mengatur gambar menjadi tengah horizontal */
+}
+
+.centered-image {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    display: inline-block; /* Agar elemen inline agar dapat diatur ke tengah */
+    vertical-align: middle; /* Mengatur gambar ke tengah vertikal */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.centered-certificate {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    display: inline-block; /* Agar elemen inline agar dapat diatur ke tengah */
+    vertical-align: middle; /* Mengatur gambar ke tengah vertikal */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.right-image {
+    width: 175px;
+    float: right; /* Mengatur posisi gambar ke kanan */
+    margin-right: 20px; /* Jarak antara gambar dengan teks */
+}
+img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
