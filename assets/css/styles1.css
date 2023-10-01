@@ -111,3 +111,42 @@ img {
     height: auto;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+@media screen and (max-width: 600px) {
+    .right-image {
+        width: 125px;
+        float: right; /* Mengatur posisi gambar ke kanan */
+        margin-right: 20px; /* Jarak antara gambar dengan teks */
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+    .left-image {
+        width: 100px;
+        float: left; 
+        margin-left: 20px; 
+        box-shadow: 0 0 5px rgba(255, 250, 250, 0.2);
+    }
+    .centered-image {
+        width: 150px;
+        height: auto;
+        display: inline-block; /* Agar elemen inline agar dapat diatur ke tengah */
+        vertical-align: middle; /* Mengatur gambar ke tengah vertikal */
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+
+}
+@media screen and (max-width: 458px) {
+    .right-image {
+        width: 125px;
+    }
+    .left-image {
+        width: 100px;
+    }
+    .centered-image {
+        width: 150px;
+    }
+    .centered-container {
+        margin-left: 35%;
+        margin-right: 28%;
+        margin-bottom: 50px;
+        text-align: center; /* Mengatur gambar menjadi tengah horizontal */
+    }
+}
