@@ -111,7 +111,7 @@ img {
     height: auto;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 604px) {
     .right-image {
         width: 125px;
         float: right; /* Mengatur posisi gambar ke kanan */
