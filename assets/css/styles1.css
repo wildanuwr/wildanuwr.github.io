@@ -63,14 +63,29 @@ a:hover {
 }
 .left-image {
     width: 150px;
-    float: left; /* Mengatur posisi gambar ke kiri */
-    margin-left: 20px; /* Jarak antara gambar dengan teks */
+    float: left; 
+    margin-left: 20px; 
+    box-shadow: 0 0 5px rgba(255, 250, 250, 0.2);
 }
 
 .centered-container {
+    margin: auto;
     margin-bottom: 50px;
     text-align: center; /* Mengatur gambar menjadi tengah horizontal */
 }
+
+.centered-video {
+    margin: auto;
+    height: 50%;
+    width: 50%;
+    text-align: center;
+}
+video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
 .centered-image {
     width: 200px;
@@ -78,7 +93,7 @@ a:hover {
     height: auto;
     display: inline-block; /* Agar elemen inline agar dapat diatur ke tengah */
     vertical-align: middle; /* Mengatur gambar ke tengah vertikal */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
 }
 .centered-certificate {
     width: 500px;
@@ -93,6 +108,7 @@ a:hover {
     width: 175px;
     float: right; /* Mengatur posisi gambar ke kanan */
     margin-right: 20px; /* Jarak antara gambar dengan teks */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
 }
 img {
     max-width: 100%;
