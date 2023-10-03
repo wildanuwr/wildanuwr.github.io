@@ -91,8 +91,8 @@ a:hover {
 
 .centered-video {
     margin: auto;
-    height: 50%;
-    width: 50%;
+    height: 80%;
+    width: 80%;
     text-align: center;
 }
 video {
