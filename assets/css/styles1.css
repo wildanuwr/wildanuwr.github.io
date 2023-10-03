@@ -114,6 +114,9 @@ img {
     height: auto;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+.footer {
+    text-align: center;    
+}
 @media screen and (max-width: 604px) {
     .right-image {
         width: 125px;
@@ -134,6 +137,9 @@ img {
         vertical-align: middle; /* Mengatur gambar ke tengah vertikal */
         box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
     }
+    .footer {
+        text-align: center;
+    }
 
 }
 @media screen and (max-width: 458px) {
@@ -151,5 +157,8 @@ img {
         margin-right: 28%;
         margin-bottom: 50px;
         text-align: center; /* Mengatur gambar menjadi tengah horizontal */
+    }
+    .footer {
+        text-align: center;
     }
 }
