@@ -7,7 +7,6 @@ html, body, h1, h2, p, ul, ol, li, img {
 
 body {
     align-items: center;
-    font-family: "Arial", sans-serif;
     line-height: 1.6;
     margin: 10px;
     background-color: #daf1f1be;
@@ -38,7 +37,6 @@ h4 {
 }
 
 p {
-    font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: justify;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -49,7 +47,6 @@ p {
 }
 
 ul, ol {
-    font-family: Georgia, 'Times New Roman', Times, serif;
     margin-left: 50px;
     margin-bottom: 20px;
     color: #2b2929;
@@ -153,9 +150,9 @@ img {
         width: 150px;
     }
     .centered-container {
-        margin-left: 35%;
-        margin-right: 28%;
-        margin-bottom: 50px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 30px;
         text-align: center; /* Mengatur gambar menjadi tengah horizontal */
     }
     .footer {
