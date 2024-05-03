@@ -107,6 +107,27 @@ var TxtType = function(el, toRotate, period) {
     document.body.appendChild(css);
     };
 
+    function ucapan() {
+        var element = document.getElementById('ucapanku');
+        var h = (new Date()).getHours();
+        
+        if (h >= 4 && h < 10) {
+            element.innerHTML = "Selamat pagi,";
+        } else if (h >= 10 && h < 15) {
+            element.innerHTML = "Selamat siang,";
+        } else if (h >= 15 && h < 18) {
+            element.innerHTML = "Selamat sore,";
+        } else {
+            element.innerHTML = "Selamat malam,";
+        }
+    }
+    
+    // Panggil fungsi ketika halaman selesai dimuat
+    document.addEventListener("DOMContentLoaded", function(event) {
+        ucapan();
+    });
+    
+
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
