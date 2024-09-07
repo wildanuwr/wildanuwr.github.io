@@ -43,7 +43,7 @@ p {
     margin-left: 30px;
     margin-right: 30px;
     color: #383333;
-    line-height: 1.2; /* Menambahkan jarak antara baris */
+    line-height: 1.2;
 }
 
 ul, ol {
