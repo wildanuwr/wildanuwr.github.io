@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutorial Generate AAB Flutter & Upload ke Play Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.7;
+}
+header {
+    background: linear-gradient(135deg, #1e88e5, #42a5f5);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+header p {
+    opacity: 0.9;
+}
+.container {
+    max-width: 900px;
+    margin: -40px auto 50px;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+h2 {
+    margin-top: 40px;
+    color: #1e88e5;
+}
+h3 {
+    margin-top: 25px;
+}
+code {
+    background: #f1f1f1;
+    padding: 3px 6px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+pre {
+    background: #1e1e1e;
+    color: #00ff99;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+.step {
+    background: #e3f2fd;
+    padding: 10px 15px;
+    border-left: 4px solid #1e88e5;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: #111;
+    color: #aaa;
+    font-size: 14px;
+}
+.badge {
+    display: inline-block;
+    background: #1e88e5;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+ul {
+    padding-left: 20px;
+}
+@media (max-width:768px){
+    .container{
+        padding:20px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="badge">Flutter Tutorial</div>
+    <h1>Cara Generate AAB Flutter & Upload ke Play Store</h1>
+    <p>Panduan lengkap dari build hingga publish ke Google Play</p>
+</header>
+
+<div class="container">
+
+<h2>1️⃣ Generate Keystore</h2>
+
+<div class="step">Jalankan perintah berikut di terminal:</div>
+
+<pre>keytool -genkey -v -keystore upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload</pre>
+
+<p>Simpan file <code>upload-keystore.jks</code> ke:</p>
+<pre>android/app/</pre>
+
+---
+
+<h2>2️⃣ Buat File key.properties</h2>
+
+<p>Buat file di:</p>
+<pre>android/key.properties</pre>
+
+<p>Isi dengan:</p>
+
+<pre>
+storePassword=PASSWORD_KAMU
+keyPassword=PASSWORD_KAMU
+keyAlias=upload
+storeFile=upload-keystore.jks
+</pre>
+
+---
+
+<h2>3️⃣ Konfigurasi build.gradle</h2>
+
+<p>Edit file:</p>
+<pre>android/app/build.gradle</pre>
+
+<p>Tambahkan konfigurasi berikut:</p>
+
+<pre>
+signingConfigs {
+    release {
+        keyAlias keystoreProperties['keyAlias']
+        keyPassword keystoreProperties['keyPassword']
+        storeFile file(keystoreProperties['storeFile'])
+        storePassword keystoreProperties['storePassword']
+    }
+}
+
+buildTypes {
+    release {
+        signingConfig signingConfigs.release
+        minifyEnabled false
+        shrinkResources false
+    }
+}
+</pre>
+
+---
+
+<h2>4️⃣ Build File AAB</h2>
+
+<pre>
+flutter clean
+flutter pub get
+flutter build appbundle --release
+</pre>
+
+<p>File AAB akan tersedia di:</p>
+<pre>build/app/outputs/bundle/release/app-release.aab</pre>
+
+---
+
+<h2>5️⃣ Upload ke Google Play Console</h2>
+
+<h3>Langkah Upload:</h3>
+<ul>
+<li>Login ke Google Play Console</li>
+<li>Klik <strong>Create App</strong></li>
+<li>Isi Store Listing (deskripsi, icon, screenshot)</li>
+<li>Masuk ke <strong>Production → Create New Release</strong></li>
+<li>Upload file <code>.aab</code></li>
+<li>Isi release notes</li>
+<li>Kirim untuk review</li>
+</ul>
+
+---
+
+<h2>6️⃣ Update Versi Aplikasi</h2>
+
+<p>Edit file <code>pubspec.yaml</code>:</p>
+
+<pre>version: 1.0.1+2</pre>
+
+<p>Lalu build ulang:</p>
+
+<pre>flutter build appbundle --release</pre>
+
+---
+
+<h2>⚠️ Tips Agar Tidak Ditolak</h2>
+
+<ul>
+<li>Gunakan targetSdk terbaru</li>
+<li>Jangan pakai debug keystore</li>
+<li>Pastikan tidak crash saat dibuka</li>
+<li>Wajib punya Privacy Policy</li>
+</ul>
+
+</div>
+
+<div class="footer">
+© 2026 Tutorial Flutter Publish Play Store | Dibuat dengan ❤️ untuk Developer Indonesia
+</div>
+
+</body>
+</html>
